@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const AWS = require('aws-sdk');
 const path = require('path');
+const config = require('./config');
 
 const app = express();
 app.use(express.static('public'));
@@ -17,7 +18,7 @@ app.get('/', (req, res) => {
 
 app.post('/predict', (req, res) => {
     const params = {
-        MLModelId: 'ml-FvSIJUmMBti',
+        MLModelId: config.machineLearningId,
         PredictEndpoint: 'https://realtime.machinelearning.us-east-1.amazonaws.com',
         Record: req.body,
     };
