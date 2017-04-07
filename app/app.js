@@ -2,10 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const AWS = require('aws-sdk');
 const path = require('path');
-const config = require('./config');
+const config = require('../config');
 
 const app = express();
-app.use(express.static('public'));
+app.use(express.static('client'));
 app.use(bodyParser.json());
 
 AWS.config.loadFromPath('./app/aws-creds.json');
