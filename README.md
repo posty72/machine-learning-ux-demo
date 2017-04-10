@@ -8,7 +8,8 @@ A small demonstration of how machine learning can be applied to make a user's ex
 2. Set up your machine learning models in AWS Console
 3. Create a `config.js` file and add your machine learning ID from AWS
 
-```module.exports = {
+```
+module.exports = {
     machineLearningId: 'ml-id'
 }
 ```
