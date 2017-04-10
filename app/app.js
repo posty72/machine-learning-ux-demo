@@ -5,10 +5,10 @@ const path = require('path');
 const config = require('../config');
 
 const app = express();
-app.use(express.static('client'));
+app.use(express.static(path.join(__dirname, '../client')));
 app.use(bodyParser.json());
 
-AWS.config.loadFromPath('./app/aws-creds.json');
+AWS.config.loadFromPath(path.join(__dirname, '../aws-creds.json'));
 
 const machineLearning = new AWS.MachineLearning();
 
