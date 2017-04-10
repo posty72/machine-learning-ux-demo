@@ -23,8 +23,6 @@ app.post('/predict', (req, res) => {
         Record: req.body,
     };
 
-    console.log(req.body);
-
     machineLearning.predict(params, (err, data) => {
         if (err) {
             console.log(err);
